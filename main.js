@@ -131,10 +131,11 @@ gsap.utils.toArray('[data-reveal]').forEach((el) => {
 
 // Text mask reveals — wrap children, slide them up from behind a mask
 gsap.utils.toArray('[data-reveal-text]').forEach((el) => {
-  // Wrap content in a span so we can transform it
   const inner = document.createElement('span');
   inner.style.display = 'inline-block';
   inner.style.willChange = 'transform';
+  el.style.overflow = 'hidden';
+  el.style.display = 'block';
   while (el.firstChild) inner.appendChild(el.firstChild);
   el.appendChild(inner);
 
