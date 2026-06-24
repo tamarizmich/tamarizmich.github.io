@@ -1,276 +1,438 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <!--Icon-->
+  <meta name="description" content="Aneth Michelle Tamariz Moreno — Software Engineer portfolio. Full-stack development across web, mobile, and desktop.">
+  <meta name="theme-color" content="#7DD3FC">
+
   <link rel="icon" type="image/x-icon" href="assets/braces-asterisk.svg">
-  <!--Font-->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <!--CSS-->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=VT323&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="styles.css">
-  <title>Aneth Michelle Tamariz Moreno</title>
+
+  <title>Aneth Michelle Tamariz Moreno — Software Engineer</title>
 </head>
 
 <body>
-  <header class="d-flex justify-content-center py-3">
-    <ul class="nav nav-pills">
-      <li class="nav-item"><a href="#about-me" class="nav-link active" aria-current="page">About Me</a></li>
-      <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-      <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
+  <!-- Animated background -->
+  <div class="aurora" aria-hidden="true">
+    <div class="aurora__blob aurora__blob--1"></div>
+    <div class="aurora__blob aurora__blob--2"></div>
+    <div class="aurora__blob aurora__blob--3"></div>
+  </div>
+
+  <!-- Floating bubbles -->
+  <div class="bubbles" aria-hidden="true">
+    <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+    <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav-shell">
+    <nav class="nav glass" aria-label="Primary">
+      <a href="#home" class="nav__brand">
+        <span class="nav__sparkle">✦</span>
+        <span>michelle</span>
+      </a>
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link" data-magnetic>About</a></li>
+        <li><a href="#skills" class="nav__link" data-magnetic>Skills</a></li>
+        <li><a href="#work" class="nav__link" data-magnetic>Work</a></li>
+        <li><a href="#contact" class="nav__link" data-magnetic>Contact</a></li>
+      </ul>
+      <a href="assets/CV.pdf" download="CV_Aneth_Michelle_Tamariz_Moreno.pdf" class="nav__cta chrome-btn" data-magnetic>
+        <span>Resume</span>
+        <i class="bi bi-arrow-down"></i>
+      </a>
+    </nav>
   </header>
+
   <main>
 
-    <section class="about-me" id="about-me">
-  <div class="container col-xxl-8 px-4 py-5">
-    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="assets/mich.png" alt="Aneth Michelle Tamariz Moreno" width="500" class="d-block mx-auto mb-4 rounded-circle img-about-me">
-      </div>
-      <div class="col-lg-6">
-        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Aneth Michelle Tamariz Moreno</h1>
-        <h2 id="app" class="text-body-emphasis"></h2>
-        <p class="lead">Software Engineering student at Universidad Veracruzana, with experience in developing desktop, 
-          mobile, and web applications. Strong ability to learn and adapt to new technologies.</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="assets/CV.pdf" download="CV_Aneth_Michelle_Tamariz_Moreno.pdf">
-            <button type="button" class="btn btn-outline-secondary btn-lg px-4">View My Resume</button>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <div class="hero__chip glass" data-reveal>
+          <span class="pulse-dot"></span>
+          <span>Graduating July 2026 · Open to opportunities</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line" data-reveal-text>Aneth Michelle</span>
+          <span class="line italic" data-reveal-text>Tamariz Moreno</span>
+        </h1>
+
+        <p class="hero__sub" data-reveal>
+          Soon-to-be Software Engineer building thoughtful interfaces and reliable systems —
+          across <em>web</em>, <em>mobile</em> and <em>desktop</em>.
+        </p>
+
+        <div class="hero__cta" data-reveal>
+          <a href="#work" class="chrome-btn chrome-btn--primary" data-magnetic>
+            <span>See my work</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="#contact" class="chrome-btn chrome-btn--ghost" data-magnetic>
+            <span>Get in touch</span>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
+        <div class="hero__scroll" aria-hidden="true">
+          <span>scroll</span>
+          <div class="hero__scroll-line"></div>
+        </div>
+      </div>
 
-    <section class="skills" id="skills">
-  <div class="container px-4 py-5" id="icon-grid">
-    <h2 class="pb-2 border-bottom">Skills</h2>
+      <!-- Floating glass orb -->
+      <div class="orb" aria-hidden="true">
+        <div class="orb__inner"></div>
+        <div class="orb__shine"></div>
+      </div>
+    </section>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-window-stack text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Web Development</h3>
-          <p>Proficient in HTML, CSS, and JavaScript. Experience using frameworks such as Bootstrap.</p>
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal>01 — About</span>
+          <h2 class="section-title" data-reveal-text>A bit about me</h2>
         </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-server text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Database Management</h3>
-          <p>Experience with relational databases. Database design in MySQL and SQL Server.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-terminal-fill text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Programming Languages</h3>
-          <p>Experience with programming languages such as Java, C#, Python, JavaScript, Python.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-git text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Version Control</h3>
-          <p>Proficient in Git and GitHub for project version control.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-android text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Mobile Development</h3>
-          <p>Development of mobile applications in Android Studio using Java.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-balloon-heart-fill text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Adaptability</h3>
-          <p>Ability to adapt to new environments and technologies.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-people-fill text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Teamwork</h3>
-          <p>Experience working in multiple teams throughout my academic career on software development projects.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-book-fill text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Self-Learning</h3>
-          <p>Ability to quickly learn new technologies independently, strengthening both knowledge and skills.</p>
-        </div>
-      </div>
-      <!-- New Skills -->
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-code-slash text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">API Development</h3>
-          <p>Development of RESTful APIs using Node.js and Express.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-calendar-fill text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Time Management</h3>
-          <p>Use of tools such as Trello and Google Calendar for task organization and time management, along with the 
-            Pomodoro technique and Notion.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-lightbulb text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Creativity</h3>
-          <p>Ability to propose creative solutions to software design and development challenges.</p>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <i class="bi bi-shield-check text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em"></i>
-        <div>
-          <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Resilience</h3>
-          <p>Capability to overcome obstacles and adapt to challenging situations.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-    <section class="projects" id="projects">
-  <div class="container px-4 py-5" id="custom-cards">
-    <h2 class="pb-2 border-bottom">Projects</h2>
+        <div class="about__grid">
+          <div class="about__photo glass" data-reveal data-tilt>
+            <img src="assets/mich.png" alt="Aneth Michelle Tamariz Moreno" loading="lazy">
+            <div class="about__photo-glow"></div>
+          </div>
 
-    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-      <div class="col">
-        <div class="img-project1 card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Pinterest Clone</h3>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://jaki-jezyk-programowania.pl/img/technologies/html&css.png" alt="HTML & CSS" width="32" height="32"
-                  class="rounded-circle border border-white">
+          <div class="about__copy">
+            <p data-reveal>
+              I'm a final-semester <strong>Software Engineering</strong> student at
+              <strong>Universidad Veracruzana</strong>, graduating in <strong>July 2026</strong>.
+            </p>
+            <p data-reveal>
+              I've shipped projects across the stack — from Android apps and C# desktop games
+              to web frontends and REST API guides on security. I care about clean code,
+              expressive UI, and learning fast.
+            </p>
+            <p data-reveal>
+              Currently exploring opportunities where I can grow as an engineer while
+              contributing to teams that value craft and curiosity.
+            </p>
+
+            <ul class="about__stats" data-reveal>
+              <li class="glass">
+                <span class="stat__num">6+</span>
+                <span class="stat__label">Languages & frameworks</span>
               </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-                <small>Website</small>
+              <li class="glass">
+                <span class="stat__num">3</span>
+                <span class="stat__label">Platforms shipped</span>
               </li>
-              <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#calendar3"></use>
-                </svg>
+              <li class="glass">
+                <span class="stat__num">2026</span>
+                <span class="stat__label">Graduation year</span>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="img-project2 card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">CLUEDO Spider-Man Game</h3>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVXBU6xS6lg6dvSkQ5cMrwdkbMj9mfy2Jqg&s" alt="C# .NET" width="32" height="32"
-                  class="rounded-circle border border-white">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-                <small>C# .NET</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#calendar3"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="img-project3 card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg">
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-            <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Menstrual Tracker Mobile App</h3>
-            <ul class="d-flex list-unstyled mt-auto">
-              <li class="me-auto">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDHvnyoyWI-FlgTfOWRoJjazD3ke1Q6hOgfQ&s" alt="Android" width="32" height="32"
-                  class="rounded-circle border border-white">
-              </li>
-              <li class="d-flex align-items-center me-3">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#geo-fill"></use>
-                </svg>
-                <small>Android</small>
-              </li>
-              <li class="d-flex align-items-center">
-                <svg class="bi me-2" width="1em" height="1em">
-                  <use xlink:href="#calendar3"></use>
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <section class="contact" id="contact">
-      <div class="container px-4 py-5">
-        <div class="container my-5">
-          <div class="position-relative p-5 text-center text-muted bck-body border border-dashed rounded-5">
-            <i class="bi bi-envelope" style="font-size: 3rem;color:#337357"></i>
-            <h1 class="text-body-emphasis">Do you have a project in mind?</h1>
-            <p class="col-lg-6 mx-auto mb-4"> If you are planning a software project and require professional support to 
-          develop it, please feel free to reach out. I will be glad to assist you in turning your idea into reality.</p>
-            <a href="mailto:michellemoreno1313@gmail.com">
-              <button class="btn btn-primary px-5 mb-5" type="button">
-                Contact Me
-              </button>
-            </a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal>02 — Skills</span>
+          <h2 class="section-title" data-reveal-text>What I work with</h2>
+        </div>
+
+        <div class="skills__grid">
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-window-stack"></i></div>
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript. Experience with Bootstrap and modern responsive layouts.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-code-slash"></i></div>
+            <h3>API Development</h3>
+            <p>RESTful APIs with Node.js and Express. Recent focus on security best practices.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-server"></i></div>
+            <h3>Databases</h3>
+            <p>Relational database design and management with MySQL and SQL Server.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-terminal-fill"></i></div>
+            <h3>Languages</h3>
+            <p>Java, C#, Python, JavaScript, PHP, C — multi-paradigm and multi-platform.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-android2"></i></div>
+            <h3>Mobile</h3>
+            <p>Native Android development with Java in Android Studio.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-shield-lock"></i></div>
+            <h3>Security</h3>
+            <p>Threat modeling, CWE analysis, and secure API design — recent focus area.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-git"></i></div>
+            <h3>Version Control</h3>
+            <p>Git and GitHub workflows for collaborative project versioning.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-people-fill"></i></div>
+            <h3>Teamwork</h3>
+            <p>Multiple team-based academic projects across full development lifecycles.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-book-fill"></i></div>
+            <h3>Self-Learning</h3>
+            <p>Quick at picking up new tech stacks independently — always experimenting.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-lightbulb"></i></div>
+            <h3>Creativity</h3>
+            <p>Comfortable proposing creative solutions to design and product challenges.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-calendar-fill"></i></div>
+            <h3>Time Management</h3>
+            <p>Trello, Notion, Pomodoro — structured workflows that ship.</p>
+          </article>
+
+          <article class="skill-card glass" data-reveal>
+            <div class="skill-card__icon"><i class="bi bi-balloon-heart-fill"></i></div>
+            <h3>Adaptability</h3>
+            <p>Comfortable jumping into new environments, stacks, and team cultures.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="work" id="work">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal>03 — Selected work</span>
+          <h2 class="section-title" data-reveal-text>Things I've built</h2>
+        </div>
+
+        <div class="work__grid">
+
+          <article class="project glass" data-reveal data-tilt style="--p-img: url('assets/spider-clue-mockup.png')">
+            <div class="project__media"></div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Desktop · C# .NET</span>
+                <span class="project__year">2024</span>
+              </div>
+              <h3>CLUEDO: Spider-Man Edition</h3>
+              <p>Classic CLUEDO reimagined with a Spider-Man theme. Built with C# and Windows Forms.</p>
+              <div class="project__tags">
+                <span>C#</span><span>.NET</span><span>WinForms</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal data-tilt style="--p-img: url('assets/cyclecare.png')">
+            <div class="project__media"></div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Mobile · Android</span>
+                <span class="project__year">2024</span>
+              </div>
+              <h3>CycleCare</h3>
+              <p>Native Android app for menstrual cycle tracking, built with Java in Android Studio.</p>
+              <div class="project__tags">
+                <span>Java</span><span>Android</span><span>SQLite</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal data-tilt style="--p-img: url('assets/clon-pinterest.png')">
+            <div class="project__media"></div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Web · Front-end</span>
+                <span class="project__year">2023</span>
+              </div>
+              <h3>Pinterest Clone</h3>
+              <p>Pixel-faithful Pinterest reimplementation focused on responsive layout fundamentals.</p>
+              <div class="project__tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project--accent glass" data-reveal data-tilt>
+            <a href="https://github.com/tamarizmich/guia-apis-rest-seguras" target="_blank" rel="noopener" class="project__link" aria-label="View on GitHub"></a>
+            <div class="project__media project__media--graphic">
+              <div class="graphic graphic--api">
+                <div class="graphic__node">{ }</div>
+                <div class="graphic__lock"><i class="bi bi-shield-lock-fill"></i></div>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Guide · Security</span>
+                <span class="project__year">2026 ✦ new</span>
+              </div>
+              <h3>Secure REST APIs Guide</h3>
+              <p>Practical guide on building REST APIs with security baked in. CWE coverage and code examples.</p>
+              <div class="project__tags">
+                <span>API</span><span>Security</span><span>Node.js</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal data-tilt>
+            <a href="https://github.com/tamarizmich/kali-uchis-site" target="_blank" rel="noopener" class="project__link" aria-label="View on GitHub"></a>
+            <div class="project__media project__media--graphic">
+              <div class="graphic graphic--site">
+                <div class="graphic__star">✦</div>
+                <div class="graphic__title">kali uchis</div>
+                <div class="graphic__bar"></div>
+                <div class="graphic__bar graphic__bar--short"></div>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Web · Fan site</span>
+                <span class="project__year">2024</span>
+              </div>
+              <h3>Kali Uchis Tribute Site</h3>
+              <p>Editorial-style fan site exploring expressive typography and layout composition.</p>
+              <div class="project__tags">
+                <span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project glass" data-reveal data-tilt>
+            <a href="https://github.com/tamarizmich/calculadora_web" target="_blank" rel="noopener" class="project__link" aria-label="View on GitHub"></a>
+            <div class="project__media project__media--graphic">
+              <div class="graphic graphic--calc">
+                <div class="graphic__screen">3.14</div>
+                <div class="graphic__keys">
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Web · JavaScript</span>
+                <span class="project__year">2024</span>
+              </div>
+              <h3>Web Calculator</h3>
+              <p>Clean JavaScript calculator focused on event handling and DOM updates.</p>
+              <div class="project__tags">
+                <span>JavaScript</span><span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project--accent glass" data-reveal data-tilt>
+            <a href="https://github.com/ikariscraft/algorithm-visualizer" target="_blank" rel="noopener" class="project__link" aria-label="View on GitHub"></a>
+            <div class="project__media project__media--graphic">
+              <div class="graphic graphic--algo">
+                <div class="graphic__algogrid">
+                  <span class="cell--start"></span><span class="cell--path"></span><span class="cell--path"></span><span class="cell--path"></span>
+                  <span class="cell--visited"></span><span class="cell--wall"></span><span class="cell--wall"></span><span class="cell--path"></span>
+                  <span class="cell--visited"></span><span class="cell--visited"></span><span class="cell--wall"></span><span class="cell--path"></span>
+                  <span></span><span class="cell--visited"></span><span class="cell--visited"></span><span class="cell--end"></span>
+                </div>
+              </div>
+            </div>
+            <div class="project__body">
+              <div class="project__meta">
+                <span>Web · Algorithms</span>
+                <span class="project__year">2026 ✦ new</span>
+              </div>
+              <h3>Algorithm Visualizer</h3>
+              <p>Interactive pathfinding and sorting visualizer. BFS, DFS, Dijkstra, A* with race mode and live stats.</p>
+              <div class="project__tags">
+                <span>JavaScript</span><span>HTML</span><span>CSS</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact__card glass" data-reveal>
+          <div class="contact__sparkles" aria-hidden="true">
+            <span>✦</span><span>✧</span><span>✦</span>
+          </div>
+          <span class="eyebrow">04 — Contact</span>
+          <h2 class="contact__title">
+            <span class="line" data-reveal-text>Got a project</span>
+            <span class="line italic" data-reveal-text>in mind?</span>
+          </h2>
+          <p data-reveal>
+            If you're planning a software project and need professional support,
+            I'd be glad to help bring your idea to life.
+          </p>
+          <a href="mailto:michellemoreno1313@gmail.com" class="chrome-btn chrome-btn--primary chrome-btn--large" data-magnetic>
+            <span>Say hello</span>
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+
+          <ul class="contact__socials">
+            <li><a href="https://github.com/tamarizmich" target="_blank" rel="noopener" data-magnetic><i class="bi bi-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/michelletamariz/" target="_blank" rel="noopener" data-magnetic><i class="bi bi-linkedin"></i></a></li>
+            <li><a href="https://x.com/tamarizmich" target="_blank" rel="noopener" data-magnetic><i class="bi bi-twitter-x"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top border-bottom">
-    <p class="col-md-4 mb-0 text-body-primary px-4" style="color: white;">© 2025 Tamariz Moreno</p>
-
-    <ul class="nav col-md-4 d-flex align-items-center justify-content-center">
-      <li class="nav-item"><a href="https://github.com/tamarizmich" target="_blank" class="nav-link px-2 text-body-primary"><i class="bi bi-github"></i></a></li>
-      <li class="nav-item"><a href="https://www.linkedin.com/in/michelletamariz/" target="_blank" class="nav-link px-2 text-body-primary"><i class="bi bi-linkedin"></i></a></li>
-      <li class="nav-item"><a href="https://x.com/tamarizmich" target="_blank" class="nav-link px-2 text-body-primary"><i class="bi bi-twitter-x"></i></a></li>
-    </ul>
+  <footer class="footer">
+    <div class="container footer__row">
+      <span>© 2026 Aneth Michelle Tamariz Moreno</span>
+      <span class="footer__signature">crafted with <i class="bi bi-heart-fill"></i> & ✦</span>
+    </div>
   </footer>
 
-  <!-- JS Typewriter-->
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-  <!--JS-->
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Lenis smooth scroll -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- Main script -->
   <script src="main.js"></script>
-  <!-- JavaScript Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
