@@ -47,7 +47,6 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -759,6 +758,35 @@ ul  { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: 5;
+}
+
+.project__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 6;
+}
+
+.project__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.project__btn:hover {
+  background: rgba(255,255,255,0.22);
+  border-color: rgba(255,255,255,0.4);
 }
 
 .project__media {

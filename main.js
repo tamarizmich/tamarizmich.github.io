@@ -113,17 +113,20 @@ if (!prefersReducedMotion && !isTouchDevice) {
 
 // Standard fade-up reveals
 gsap.utils.toArray('[data-reveal]').forEach((el) => {
-  gsap.to(el, {
-    opacity: 1,
-    y: 0,
-    duration: 1.1,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: el,
-      start: 'top 88%',
-      toggleActions: 'play none none none'
+  gsap.fromTo(el,
+    { opacity: 0, y: 40 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 88%',
+        toggleActions: 'play none none none'
+      }
     }
-  });
+  );
 });
 
 // Text mask reveals — wrap children, slide them up from behind a mask
@@ -177,7 +180,8 @@ if (!prefersReducedMotion && !isTouchDevice && (orb || heroTitle)) {
 document.addEventListener('mouseleave', () => cursor && (cursor.style.opacity = '0'));
 document.addEventListener('mouseenter', () => cursor && (cursor.style.opacity = '1'));
 
-/* ---------- Refresh ScrollTrigger after fonts load ---------- */
+/* ---------- Refresh ScrollTrigger after everything loads ---------- */
 if (document.fonts && document.fonts.ready) {
   document.fonts.ready.then(() => ScrollTrigger.refresh());
 }
+window.addEventListener('load', () => ScrollTrigger.refresh());
