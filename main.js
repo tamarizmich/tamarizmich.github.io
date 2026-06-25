@@ -363,3 +363,149 @@ if (document.fonts && document.fonts.ready) {
 } else {
   init();
 }
+
+/* =========================================================
+   i18n — EN / ES
+   ========================================================= */
+
+const I18N = {
+  'home.chip': {
+    en: 'Graduating July 2026 · Open to opportunities',
+    es: 'Me gradúo en julio 2026 · Abierta a oportunidades',
+  },
+  'home.sub': {
+    en: 'Software Engineering student building <em>desktop</em>, <em>mobile</em>, and <em>web</em> applications.',
+    es: 'Estudiante de Ingeniería de Software construyendo aplicaciones de <em>escritorio</em>, <em>móviles</em> y <em>web</em>.',
+  },
+
+  'menu.about':   { en: 'about',    es: 'sobre mí' },
+  'menu.skills':  { en: 'skills',   es: 'habilidades' },
+  'menu.work':    { en: 'work',     es: 'proyectos' },
+  'menu.contact': { en: 'contact',  es: 'contacto' },
+  'menu.resume':  { en: 'resume',   es: 'cv' },
+
+  'pc.header':    { en: 'player card', es: 'ficha' },
+  'pc.role':      { en: 'Software Engineer · Apprentice', es: 'Ing. de Software · Aprendiz' },
+  'pc.lv.val':    { en: '08 / 08 <em>final sem</em>', es: '08 / 08 <em>último sem</em>' },
+  'pc.cl.val':    { en: 'polyglot', es: 'políglota' },
+  'pc.main.tag':  { en: '▸ main quest',     es: '▸ misión principal' },
+  'pc.main.body': { en: 'graduate · July 2026', es: 'graduarme · julio 2026' },
+
+  'back': { en: 'menu', es: 'menú' },
+
+  'about.eyebrow': { en: '01 — About', es: '01 — Sobre mí' },
+  'about.title':   { en: 'A bit about me', es: 'Un poco sobre mí' },
+  'about.p1': {
+    en: 'Final-semester <strong>Software Engineering</strong> student at <strong>Universidad Veracruzana</strong>, with experience building desktop, mobile, and web applications.',
+    es: 'Estudiante de último semestre de <strong>Ingeniería de Software</strong> en la <strong>Universidad Veracruzana</strong>, con experiencia desarrollando aplicaciones de escritorio, móviles y web.',
+  },
+  'about.p2': {
+    en: 'I pick up new technologies quickly and work well in collaborative teams. Recently, my focus has been on application security and clean API design.',
+    es: 'Aprendo nuevas tecnologías con rapidez y trabajo bien en equipos colaborativos. Recientemente, mi enfoque ha sido la seguridad de aplicaciones y el diseño limpio de APIs.',
+  },
+  'about.p3': {
+    en: 'Graduating in July 2026. Looking for my first role in software engineering, on a team where I can contribute and keep learning.',
+    es: 'Me gradúo en julio de 2026. Busco mi primer rol en ingeniería de software, en un equipo donde pueda contribuir y seguir aprendiendo.',
+  },
+  'about.stat1': { en: 'Languages & frameworks', es: 'Lenguajes & frameworks' },
+  'about.stat3': { en: 'Graduation year',        es: 'Año de graduación' },
+
+  'skills.eyebrow': { en: '02 — Skills', es: '02 — Habilidades' },
+  'skills.title':   { en: 'What I work with', es: 'Con lo que trabajo' },
+
+  'skill.web.h':       { en: 'Web Development', es: 'Desarrollo Web' },
+  'skill.web.p':       { en: 'HTML, CSS, JavaScript. Experience with Bootstrap and modern responsive layouts.', es: 'HTML, CSS, JavaScript. Experiencia con Bootstrap y layouts responsivos modernos.' },
+  'skill.api.h':       { en: 'API Development', es: 'Desarrollo de APIs' },
+  'skill.api.p':       { en: 'RESTful APIs with Node.js and Express. Recent focus on security best practices.', es: 'APIs RESTful con Node.js y Express. Enfoque reciente en buenas prácticas de seguridad.' },
+  'skill.db.h':        { en: 'Databases', es: 'Bases de Datos' },
+  'skill.db.p':        { en: 'Relational database design and management with MySQL and SQL Server.', es: 'Diseño y gestión de bases de datos relacionales con MySQL y SQL Server.' },
+  'skill.lang.h':      { en: 'Languages', es: 'Lenguajes' },
+  'skill.lang.p':      { en: 'Java, C#, Python, JavaScript, PHP, C — multi-paradigm and multi-platform.', es: 'Java, C#, Python, JavaScript, PHP, C — multiparadigma y multiplataforma.' },
+  'skill.mobile.h':    { en: 'Mobile', es: 'Móvil' },
+  'skill.mobile.p':    { en: 'Native Android development with Java in Android Studio.', es: 'Desarrollo Android nativo con Java en Android Studio.' },
+  'skill.sec.h':       { en: 'Security', es: 'Seguridad' },
+  'skill.sec.p':       { en: 'Threat modeling, CWE analysis, and secure API design — recent focus area.', es: 'Modelado de amenazas, análisis CWE y diseño seguro de APIs — enfoque actual.' },
+  'skill.git.h':       { en: 'Version Control', es: 'Control de Versiones' },
+  'skill.git.p':       { en: 'Git and GitHub workflows for collaborative project versioning.', es: 'Flujos de Git y GitHub para versionado colaborativo de proyectos.' },
+  'skill.team.h':      { en: 'Teamwork', es: 'Trabajo en equipo' },
+  'skill.team.p':      { en: 'Multiple team-based academic projects across full development lifecycles.', es: 'Varios proyectos académicos en equipo a lo largo de ciclos completos de desarrollo.' },
+  'skill.self.h':      { en: 'Self-Learning', es: 'Autoaprendizaje' },
+  'skill.self.p':      { en: 'Quick at picking up new tech stacks independently — always experimenting.', es: 'Aprendo rápido stacks nuevos por mi cuenta — siempre experimentando.' },
+  'skill.creative.h':  { en: 'Creativity', es: 'Creatividad' },
+  'skill.creative.p':  { en: 'Comfortable proposing creative solutions to design and product challenges.', es: 'Cómoda proponiendo soluciones creativas a retos de diseño y producto.' },
+  'skill.time.h':      { en: 'Time Management', es: 'Gestión del tiempo' },
+  'skill.time.p':      { en: 'Trello, Notion, Pomodoro — structured workflows that ship.', es: 'Trello, Notion, Pomodoro — flujos estructurados que entregan.' },
+  'skill.adapt.h':     { en: 'Adaptability', es: 'Adaptabilidad' },
+  'skill.adapt.p':     { en: 'Comfortable jumping into new environments, stacks, and team cultures.', es: 'Cómoda saltando entre nuevos entornos, stacks y culturas de equipo.' },
+
+  'work.eyebrow': { en: '03 — Selected work', es: '03 — Proyectos' },
+  'work.title':   { en: "Things I've built", es: 'Cosas que he construido' },
+
+  'project.cluedo.meta': { en: 'Desktop · C# .NET', es: 'Escritorio · C# .NET' },
+  'project.cluedo.h':    { en: 'CLUEDO: Spider-Man Edition', es: 'CLUEDO: Edición Spider-Man' },
+  'project.cluedo.p':    { en: 'Classic CLUEDO reimagined with a Spider-Man theme. Built with C# and Windows Forms.', es: 'El CLUEDO clásico reimaginado con tema de Spider-Man. Construido con C# y Windows Forms.' },
+
+  'project.cycle.meta':  { en: 'Mobile · Android', es: 'Móvil · Android' },
+  'project.cycle.h':     { en: 'CycleCare', es: 'CycleCare' },
+  'project.cycle.p':     { en: 'Native Android app for menstrual cycle tracking, built with Java in Android Studio.', es: 'App Android nativa para tracking del ciclo menstrual, construida con Java en Android Studio.' },
+
+  'project.api.meta':    { en: 'Guide · Security', es: 'Guía · Seguridad' },
+  'project.api.year':    { en: '2026 ✦ new', es: '2026 ✦ nuevo' },
+  'project.api.h':       { en: 'Secure REST APIs Guide', es: 'Guía de APIs REST Seguras' },
+  'project.api.p':       { en: 'Practical guide on building REST APIs with security baked in. CWE coverage and code examples.', es: 'Guía práctica para construir APIs REST con seguridad integrada. Cobertura de CWE y ejemplos de código.' },
+
+  'project.algo.meta':   { en: 'Web · Algorithms', es: 'Web · Algoritmos' },
+  'project.algo.year':   { en: '2026 ✦ new', es: '2026 ✦ nuevo' },
+  'project.algo.h':      { en: 'Algorithm Visualizer', es: 'Visualizador de Algoritmos' },
+  'project.algo.p':      { en: 'Interactive pathfinding and sorting visualizer. BFS, DFS, Dijkstra, A* with race mode and live stats.', es: 'Visualizador interactivo de pathfinding y sorting. BFS, DFS, Dijkstra, A* con modo carrera y estadísticas en vivo.' },
+  'project.algo.live':   { en: 'live', es: 'demo' },
+  'project.algo.code':   { en: 'code', es: 'código' },
+
+  'contact.eyebrow':  { en: '04 — Contact', es: '04 — Contacto' },
+  'contact.title.l1': { en: 'Got a project', es: '¿Tienes un proyecto' },
+  'contact.title.l2': { en: 'in mind?',      es: 'en mente?' },
+  'contact.body':     { en: "If you have a project in mind and could use an extra pair of hands, I'd love to hear about it.", es: 'Si tienes un proyecto en mente y te vendría bien un par de manos extra, me encantaría saber de él.' },
+  'contact.btn':      { en: 'Say hello', es: 'Saluda' },
+
+  'hint.nav':  { en: 'navigate', es: 'navega' },
+  'hint.sel':  { en: 'select',   es: 'elige' },
+  'hint.home': { en: 'home',     es: 'inicio' },
+};
+
+const LANG_STORAGE_KEY = 'mich.lang';
+const SUPPORTED_LANGS = ['en', 'es'];
+
+function detectInitialLang() {
+  const stored = (() => { try { return localStorage.getItem(LANG_STORAGE_KEY); } catch { return null; } })();
+  if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
+  const browser = (navigator.language || 'en').slice(0, 2).toLowerCase();
+  return SUPPORTED_LANGS.includes(browser) ? browser : 'en';
+}
+
+let currentLang = detectInitialLang();
+
+function applyLang(lang) {
+  if (!SUPPORTED_LANGS.includes(lang)) return;
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.dataset.i18n;
+    const entry = I18N[key];
+    if (!entry) return;
+    const value = entry[lang];
+    if (typeof value !== 'string') return;
+    el.innerHTML = value;
+  });
+  document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
+    btn.classList.toggle('is-active', btn.dataset.lang === lang);
+    btn.setAttribute('aria-pressed', btn.dataset.lang === lang);
+  });
+  try { localStorage.setItem(LANG_STORAGE_KEY, lang); } catch {}
+}
+
+document.querySelectorAll('.lang-switch__btn').forEach((btn) => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+// Apply once the DOM is ready (script is at end of body so this is fine)
+applyLang(currentLang);

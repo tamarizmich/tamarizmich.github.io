@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aneth Michelle Tamariz Moreno — Software Engineer portfolio. Full-stack development across web, mobile, and desktop.">
+  <meta name="description" content="Aneth Michelle Tamariz Moreno — Software Engineer portfolio. Building across web, mobile, and desktop.">
   <meta name="theme-color" content="#7DD3FC">
 
   <link rel="icon" type="image/x-icon" href="assets/braces-asterisk.svg">
@@ -33,6 +33,13 @@
     <div class="cursor__ring"></div>
   </div>
 
+  <!-- Language switch -->
+  <div class="lang-switch glass" role="group" aria-label="Language">
+    <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+    <span class="lang-switch__sep" aria-hidden="true">·</span>
+    <button type="button" class="lang-switch__btn" data-lang="es">ES</button>
+  </div>
+
   <main class="scenes">
 
     <!-- HOME / Main menu scene -->
@@ -42,7 +49,7 @@
         <div class="home__intro">
           <div class="home__chip glass">
             <span class="pulse-dot"></span>
-            <span>Graduating July 2026 · Open to opportunities</span>
+            <span data-i18n="home.chip">Graduating July 2026 · Open to opportunities</span>
           </div>
 
           <h1 class="home__title">
@@ -50,9 +57,8 @@
             <span class="line italic">Tamariz Moreno</span>
           </h1>
 
-          <p class="home__sub">
-            Final-semester Software Engineering student. I've shipped projects across
-            <em>web</em>, <em>mobile</em> and <em>desktop</em> — lately going deeper on security.
+          <p class="home__sub" data-i18n="home.sub">
+            Software Engineering student building <em>desktop</em>, <em>mobile</em>, and <em>web</em> applications.
           </p>
 
           <ul class="menu" id="main-menu" role="menu">
@@ -60,7 +66,7 @@
               <a href="#about" class="menu__item" data-menu-target="about" role="menuitem">
                 <span class="menu__cursor" aria-hidden="true">▸</span>
                 <span class="menu__num">01</span>
-                <span class="menu__label">about</span>
+                <span class="menu__label" data-i18n="menu.about">about</span>
                 <span class="menu__arrow" aria-hidden="true">→</span>
               </a>
             </li>
@@ -68,7 +74,7 @@
               <a href="#skills" class="menu__item" data-menu-target="skills" role="menuitem">
                 <span class="menu__cursor" aria-hidden="true">▸</span>
                 <span class="menu__num">02</span>
-                <span class="menu__label">skills</span>
+                <span class="menu__label" data-i18n="menu.skills">skills</span>
                 <span class="menu__arrow" aria-hidden="true">→</span>
               </a>
             </li>
@@ -76,7 +82,7 @@
               <a href="#work" class="menu__item" data-menu-target="work" role="menuitem">
                 <span class="menu__cursor" aria-hidden="true">▸</span>
                 <span class="menu__num">03</span>
-                <span class="menu__label">work</span>
+                <span class="menu__label" data-i18n="menu.work">work</span>
                 <span class="menu__arrow" aria-hidden="true">→</span>
               </a>
             </li>
@@ -84,7 +90,7 @@
               <a href="#contact" class="menu__item" data-menu-target="contact" role="menuitem">
                 <span class="menu__cursor" aria-hidden="true">▸</span>
                 <span class="menu__num">04</span>
-                <span class="menu__label">contact</span>
+                <span class="menu__label" data-i18n="menu.contact">contact</span>
                 <span class="menu__arrow" aria-hidden="true">→</span>
               </a>
             </li>
@@ -92,7 +98,7 @@
               <a href="assets/CV.pdf" download="CV_Aneth_Michelle_Tamariz_Moreno.pdf" class="menu__item menu__item--external" role="menuitem">
                 <span class="menu__cursor" aria-hidden="true">▸</span>
                 <span class="menu__num">↓</span>
-                <span class="menu__label">resume</span>
+                <span class="menu__label" data-i18n="menu.resume">resume</span>
                 <span class="menu__arrow" aria-hidden="true"><i class="bi bi-box-arrow-down"></i></span>
               </a>
             </li>
@@ -101,7 +107,7 @@
 
         <article class="player-card glass home__playercard" data-tilt aria-label="Player card — Michelle">
           <div class="player-card__header">
-            <span>player card</span>
+            <span data-i18n="pc.header">player card</span>
             <span class="player-card__sparkle" aria-hidden="true">✦</span>
           </div>
 
@@ -115,14 +121,14 @@
           <div class="player-card__identity">
             <h3 class="player-card__name">Michelle</h3>
             <p class="player-card__handle">@tamarizmich</p>
-            <p class="player-card__role">Software Engineer · Apprentice</p>
+            <p class="player-card__role" data-i18n="pc.role">Software Engineer · Apprentice</p>
           </div>
 
           <div class="player-card__divider" aria-hidden="true"></div>
 
           <ul class="player-card__stats">
-            <li><span class="player-card__key">LV.</span><span class="player-card__val">08 / 08 <em>final sem</em></span></li>
-            <li><span class="player-card__key">CL.</span><span class="player-card__val">polyglot</span></li>
+            <li><span class="player-card__key">LV.</span><span class="player-card__val" data-i18n="pc.lv.val">08 / 08 <em>final sem</em></span></li>
+            <li><span class="player-card__key">CL.</span><span class="player-card__val" data-i18n="pc.cl.val">polyglot</span></li>
             <li><span class="player-card__key">LOC.</span><span class="player-card__val">Veracruz, MX</span></li>
             <li><span class="player-card__key">GUILD</span><span class="player-card__val">Universidad Veracruzana</span></li>
             <li><span class="player-card__key">LANG</span><span class="player-card__val">ES · EN</span></li>
@@ -132,12 +138,8 @@
 
           <div class="player-card__quests">
             <div class="player-card__quest">
-              <span class="player-card__quest-tag">▸ main quest</span>
-              <span class="player-card__quest-body">graduate · July 2026</span>
-            </div>
-            <div class="player-card__quest">
-              <span class="player-card__quest-tag">▸ side quest</span>
-              <span class="player-card__quest-body">ship cool things <span class="player-card__quest-spark">✦</span></span>
+              <span class="player-card__quest-tag" data-i18n="pc.main.tag">▸ main quest</span>
+              <span class="player-card__quest-body" data-i18n="pc.main.body">graduate · July 2026</span>
             </div>
           </div>
         </article>
@@ -154,40 +156,31 @@
       <div class="scene__inner">
         <header class="scene-head">
           <button type="button" class="scene-back" data-menu-target="home">
-            <i class="bi bi-arrow-left"></i> <span>menu</span>
+            <i class="bi bi-arrow-left"></i> <span data-i18n="back">menu</span>
           </button>
-          <span class="eyebrow">01 — About</span>
-          <h2 class="section-title">A bit about me</h2>
+          <span class="eyebrow" data-i18n="about.eyebrow">01 — About</span>
+          <h2 class="section-title" data-i18n="about.title">A bit about me</h2>
         </header>
 
         <div class="about__body">
-          <p>
-            Final-semester <strong>Software Engineering</strong> student at
-            <strong>Universidad Veracruzana</strong> — graduating <strong>July 2026</strong>.
+          <p data-i18n="about.p1">
+            Final-semester <strong>Software Engineering</strong> student at <strong>Universidad Veracruzana</strong>, with experience building desktop, mobile, and web applications.
           </p>
-          <p>
-            I've built things that don't really fit one box: a Spider-Man-themed CLUEDO in
-            C# WinForms, an Android cycle tracker, an algorithm visualizer that races BFS
-            against A*, and a hands-on guide to building REST APIs the secure way. The
-            common thread is curiosity — if I haven't tried it yet, I want to.
+          <p data-i18n="about.p2">
+            I pick up new technologies quickly and work well in collaborative teams. Recently, my focus has been on application security and clean API design.
           </p>
-          <p>
-            Lately I've been leaning into security and clean API design. Looking for a first
-            role where I can keep learning fast and ship things that actually get used.
+          <p data-i18n="about.p3">
+            Graduating in July 2026. Looking for my first role in software engineering, on a team where I can contribute and keep learning.
           </p>
 
           <ul class="about__stats">
             <li class="glass">
               <span class="stat__num">6+</span>
-              <span class="stat__label">Languages & frameworks</span>
-            </li>
-            <li class="glass">
-              <span class="stat__num">3</span>
-              <span class="stat__label">Platforms shipped</span>
+              <span class="stat__label" data-i18n="about.stat1">Languages & frameworks</span>
             </li>
             <li class="glass">
               <span class="stat__num">2026</span>
-              <span class="stat__label">Graduation year</span>
+              <span class="stat__label" data-i18n="about.stat3">Graduation year</span>
             </li>
           </ul>
         </div>
@@ -199,83 +192,83 @@
       <div class="scene__inner">
         <header class="scene-head">
           <button type="button" class="scene-back" data-menu-target="home">
-            <i class="bi bi-arrow-left"></i> <span>menu</span>
+            <i class="bi bi-arrow-left"></i> <span data-i18n="back">menu</span>
           </button>
-          <span class="eyebrow">02 — Skills</span>
-          <h2 class="section-title">What I work with</h2>
+          <span class="eyebrow" data-i18n="skills.eyebrow">02 — Skills</span>
+          <h2 class="section-title" data-i18n="skills.title">What I work with</h2>
         </header>
 
         <div class="skills__grid">
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-window-stack"></i></div>
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript. Experience with Bootstrap and modern responsive layouts.</p>
+            <h3 data-i18n="skill.web.h">Web Development</h3>
+            <p data-i18n="skill.web.p">HTML, CSS, JavaScript. Experience with Bootstrap and modern responsive layouts.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-code-slash"></i></div>
-            <h3>API Development</h3>
-            <p>RESTful APIs with Node.js and Express. Recent focus on security best practices.</p>
+            <h3 data-i18n="skill.api.h">API Development</h3>
+            <p data-i18n="skill.api.p">RESTful APIs with Node.js and Express. Recent focus on security best practices.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-server"></i></div>
-            <h3>Databases</h3>
-            <p>Relational database design and management with MySQL and SQL Server.</p>
+            <h3 data-i18n="skill.db.h">Databases</h3>
+            <p data-i18n="skill.db.p">Relational database design and management with MySQL and SQL Server.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-terminal-fill"></i></div>
-            <h3>Languages</h3>
-            <p>Java, C#, Python, JavaScript, PHP, C — multi-paradigm and multi-platform.</p>
+            <h3 data-i18n="skill.lang.h">Languages</h3>
+            <p data-i18n="skill.lang.p">Java, C#, Python, JavaScript, PHP, C — multi-paradigm and multi-platform.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-android2"></i></div>
-            <h3>Mobile</h3>
-            <p>Native Android development with Java in Android Studio.</p>
+            <h3 data-i18n="skill.mobile.h">Mobile</h3>
+            <p data-i18n="skill.mobile.p">Native Android development with Java in Android Studio.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-shield-lock"></i></div>
-            <h3>Security</h3>
-            <p>Threat modeling, CWE analysis, and secure API design — recent focus area.</p>
+            <h3 data-i18n="skill.sec.h">Security</h3>
+            <p data-i18n="skill.sec.p">Threat modeling, CWE analysis, and secure API design — recent focus area.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-git"></i></div>
-            <h3>Version Control</h3>
-            <p>Git and GitHub workflows for collaborative project versioning.</p>
+            <h3 data-i18n="skill.git.h">Version Control</h3>
+            <p data-i18n="skill.git.p">Git and GitHub workflows for collaborative project versioning.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-people-fill"></i></div>
-            <h3>Teamwork</h3>
-            <p>Multiple team-based academic projects across full development lifecycles.</p>
+            <h3 data-i18n="skill.team.h">Teamwork</h3>
+            <p data-i18n="skill.team.p">Multiple team-based academic projects across full development lifecycles.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-book-fill"></i></div>
-            <h3>Self-Learning</h3>
-            <p>Quick at picking up new tech stacks independently — always experimenting.</p>
+            <h3 data-i18n="skill.self.h">Self-Learning</h3>
+            <p data-i18n="skill.self.p">Quick at picking up new tech stacks independently — always experimenting.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-lightbulb"></i></div>
-            <h3>Creativity</h3>
-            <p>Comfortable proposing creative solutions to design and product challenges.</p>
+            <h3 data-i18n="skill.creative.h">Creativity</h3>
+            <p data-i18n="skill.creative.p">Comfortable proposing creative solutions to design and product challenges.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-calendar-fill"></i></div>
-            <h3>Time Management</h3>
-            <p>Trello, Notion, Pomodoro — structured workflows that ship.</p>
+            <h3 data-i18n="skill.time.h">Time Management</h3>
+            <p data-i18n="skill.time.p">Trello, Notion, Pomodoro — structured workflows that ship.</p>
           </article>
 
-          <article class="skill-card glass" data-reveal>
+          <article class="skill-card glass">
             <div class="skill-card__icon"><i class="bi bi-balloon-heart-fill"></i></div>
-            <h3>Adaptability</h3>
-            <p>Comfortable jumping into new environments, stacks, and team cultures.</p>
+            <h3 data-i18n="skill.adapt.h">Adaptability</h3>
+            <p data-i18n="skill.adapt.p">Comfortable jumping into new environments, stacks, and team cultures.</p>
           </article>
         </div>
       </div>
@@ -286,45 +279,45 @@
       <div class="scene__inner">
         <header class="scene-head">
           <button type="button" class="scene-back" data-menu-target="home">
-            <i class="bi bi-arrow-left"></i> <span>menu</span>
+            <i class="bi bi-arrow-left"></i> <span data-i18n="back">menu</span>
           </button>
-          <span class="eyebrow">03 — Selected work</span>
-          <h2 class="section-title">Things I've built</h2>
+          <span class="eyebrow" data-i18n="work.eyebrow">03 — Selected work</span>
+          <h2 class="section-title" data-i18n="work.title">Things I've built</h2>
         </header>
 
         <div class="work__grid">
 
-          <article class="project glass" data-reveal data-tilt style="--p-img: url('assets/spider-clue-mockup.png')">
+          <article class="project glass" data-tilt style="--p-img: url('assets/spider-clue-mockup.png')">
             <div class="project__media"></div>
             <div class="project__body">
               <div class="project__meta">
-                <span>Desktop · C# .NET</span>
+                <span data-i18n="project.cluedo.meta">Desktop · C# .NET</span>
                 <span class="project__year">2024</span>
               </div>
-              <h3>CLUEDO: Spider-Man Edition</h3>
-              <p>Classic CLUEDO reimagined with a Spider-Man theme. Built with C# and Windows Forms.</p>
+              <h3 data-i18n="project.cluedo.h">CLUEDO: Spider-Man Edition</h3>
+              <p data-i18n="project.cluedo.p">Classic CLUEDO reimagined with a Spider-Man theme. Built with C# and Windows Forms.</p>
               <div class="project__tags">
                 <span>C#</span><span>.NET</span><span>WinForms</span>
               </div>
             </div>
           </article>
 
-          <article class="project glass" data-reveal data-tilt style="--p-img: url('assets/cyclecare.png')">
+          <article class="project glass" data-tilt style="--p-img: url('assets/cyclecare.png')">
             <div class="project__media"></div>
             <div class="project__body">
               <div class="project__meta">
-                <span>Mobile · Android</span>
+                <span data-i18n="project.cycle.meta">Mobile · Android</span>
                 <span class="project__year">2024</span>
               </div>
-              <h3>CycleCare</h3>
-              <p>Native Android app for menstrual cycle tracking, built with Java in Android Studio.</p>
+              <h3 data-i18n="project.cycle.h">CycleCare</h3>
+              <p data-i18n="project.cycle.p">Native Android app for menstrual cycle tracking, built with Java in Android Studio.</p>
               <div class="project__tags">
                 <span>Java</span><span>Android</span><span>SQLite</span>
               </div>
             </div>
           </article>
 
-          <article class="project project--accent glass" data-reveal data-tilt>
+          <article class="project project--accent glass" data-tilt>
             <a href="https://github.com/tamarizmich/guia-apis-rest-seguras" target="_blank" rel="noopener" class="project__link" aria-label="View on GitHub"></a>
             <div class="project__media project__media--graphic">
               <div class="graphic graphic--api">
@@ -334,18 +327,18 @@
             </div>
             <div class="project__body">
               <div class="project__meta">
-                <span>Guide · Security</span>
-                <span class="project__year">2026 ✦ new</span>
+                <span data-i18n="project.api.meta">Guide · Security</span>
+                <span class="project__year" data-i18n="project.api.year">2026 ✦ new</span>
               </div>
-              <h3>Secure REST APIs Guide</h3>
-              <p>Practical guide on building REST APIs with security baked in. CWE coverage and code examples.</p>
+              <h3 data-i18n="project.api.h">Secure REST APIs Guide</h3>
+              <p data-i18n="project.api.p">Practical guide on building REST APIs with security baked in. CWE coverage and code examples.</p>
               <div class="project__tags">
                 <span>API</span><span>Security</span><span>Node.js</span>
               </div>
             </div>
           </article>
 
-          <article class="project project--accent glass" data-reveal data-tilt>
+          <article class="project project--accent glass" data-tilt>
             <a href="https://extraordinary-paletas-3dc94a.netlify.app/" target="_blank" rel="noopener" class="project__link" aria-label="View live demo"></a>
             <div class="project__media project__media--graphic">
               <div class="graphic graphic--algo">
@@ -359,20 +352,20 @@
             </div>
             <div class="project__body">
               <div class="project__meta">
-                <span>Web · Algorithms</span>
-                <span class="project__year">2026 ✦ new</span>
+                <span data-i18n="project.algo.meta">Web · Algorithms</span>
+                <span class="project__year" data-i18n="project.algo.year">2026 ✦ new</span>
               </div>
-              <h3>Algorithm Visualizer</h3>
-              <p>Interactive pathfinding and sorting visualizer. BFS, DFS, Dijkstra, A* with race mode and live stats.</p>
+              <h3 data-i18n="project.algo.h">Algorithm Visualizer</h3>
+              <p data-i18n="project.algo.p">Interactive pathfinding and sorting visualizer. BFS, DFS, Dijkstra, A* with race mode and live stats.</p>
               <div class="project__tags">
                 <span>JavaScript</span><span>HTML</span><span>CSS</span>
               </div>
               <div class="project__actions">
                 <a href="https://extraordinary-paletas-3dc94a.netlify.app/" target="_blank" rel="noopener" class="project__btn">
-                  <i class="bi bi-box-arrow-up-right"></i> live
+                  <i class="bi bi-box-arrow-up-right"></i> <span data-i18n="project.algo.live">live</span>
                 </a>
                 <a href="https://github.com/ikariscraft/algorithm-visualizer" target="_blank" rel="noopener" class="project__btn">
-                  <i class="bi bi-github"></i> code
+                  <i class="bi bi-github"></i> <span data-i18n="project.algo.code">code</span>
                 </a>
               </div>
             </div>
@@ -386,24 +379,23 @@
     <section class="scene scene--contact" id="contact" data-scene="contact">
       <div class="scene__inner">
         <button type="button" class="scene-back" data-menu-target="home">
-          <i class="bi bi-arrow-left"></i> <span>menu</span>
+          <i class="bi bi-arrow-left"></i> <span data-i18n="back">menu</span>
         </button>
 
         <div class="contact__card glass">
           <div class="contact__sparkles" aria-hidden="true">
             <span>✦</span><span>✧</span><span>✦</span>
           </div>
-          <span class="eyebrow">04 — Contact</span>
+          <span class="eyebrow" data-i18n="contact.eyebrow">04 — Contact</span>
           <h2 class="contact__title">
-            <span class="line">Got a project</span>
-            <span class="line italic">in mind?</span>
+            <span class="line" data-i18n="contact.title.l1">Got a project</span>
+            <span class="line italic" data-i18n="contact.title.l2">in mind?</span>
           </h2>
-          <p>
-            If you're planning a software project and need professional support,
-            I'd be glad to help bring your idea to life.
+          <p data-i18n="contact.body">
+            If you have a project in mind and could use an extra pair of hands, I'd love to hear about it.
           </p>
           <a href="mailto:michellemoreno1313@gmail.com" class="chrome-btn chrome-btn--primary chrome-btn--large" data-magnetic>
-            <span>Say hello</span>
+            <span data-i18n="contact.btn">Say hello</span>
             <i class="bi bi-envelope-fill"></i>
           </a>
 
@@ -422,18 +414,17 @@
   <div class="menu-hint glass" aria-hidden="true">
     <span class="menu-hint__key">↑</span>
     <span class="menu-hint__key">↓</span>
-    <span class="menu-hint__label">navigate</span>
+    <span class="menu-hint__label" data-i18n="hint.nav">navigate</span>
     <span class="menu-hint__sep">·</span>
     <span class="menu-hint__key">↵</span>
-    <span class="menu-hint__label">select</span>
+    <span class="menu-hint__label" data-i18n="hint.sel">select</span>
     <span class="menu-hint__sep">·</span>
     <span class="menu-hint__key">esc</span>
-    <span class="menu-hint__label">home</span>
+    <span class="menu-hint__label" data-i18n="hint.home">home</span>
   </div>
 
   <footer class="footer">
     <span>© 2026 Aneth Michelle Tamariz Moreno</span>
-    <span class="footer__signature">crafted with <i class="bi bi-heart-fill"></i> & ✦</span>
   </footer>
 
   <!-- GSAP + ScrollTrigger -->
